@@ -11,12 +11,5 @@ namespace QuizSpiel
         private int Antwort_ID;
         private String Schluesselwoerter;
 
-        
-
-      
-
-
-
-
     }
 }
