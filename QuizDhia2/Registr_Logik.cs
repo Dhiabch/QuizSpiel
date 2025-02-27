@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuizDhia2
 {
@@ -11,11 +12,9 @@ namespace QuizDhia2
     {
         Benutzer benutzer = new Benutzer();
 
-        public String benutzerName()
+        private void LoginBenutzerName(TextBox tfBenutzername)
         {
-            String benutzerName = benutzer.getBenutzer();
-            return benutzerName;
+
         }
-        
     }
 }
