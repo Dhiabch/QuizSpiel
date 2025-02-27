@@ -1,6 +1,6 @@
 ﻿namespace QuizDhia2
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.tfBenutzername = new System.Windows.Forms.TextBox();
-            this.tfPasswort = new System.Windows.Forms.TextBox();
             this.bAnmelden = new System.Windows.Forms.Button();
             this.bRegestrieren = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,29 +44,21 @@
             // 
             this.tfBenutzername.AccessibleName = "";
             this.tfBenutzername.BackColor = System.Drawing.Color.White;
-            this.tfBenutzername.Location = new System.Drawing.Point(152, 325);
+            this.tfBenutzername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tfBenutzername.Location = new System.Drawing.Point(114, 325);
             this.tfBenutzername.Multiline = true;
             this.tfBenutzername.Name = "tfBenutzername";
-            this.tfBenutzername.Size = new System.Drawing.Size(288, 30);
+            this.tfBenutzername.Size = new System.Drawing.Size(326, 30);
             this.tfBenutzername.TabIndex = 0;
             this.tfBenutzername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // tfPasswort
-            // 
-            this.tfPasswort.Location = new System.Drawing.Point(152, 387);
-            this.tfPasswort.Multiline = true;
-            this.tfPasswort.Name = "tfPasswort";
-            this.tfPasswort.Size = new System.Drawing.Size(288, 30);
-            this.tfPasswort.TabIndex = 1;
-            this.tfPasswort.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // bAnmelden
             // 
-            this.bAnmelden.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAnmelden.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAnmelden.ForeColor = System.Drawing.Color.Navy;
-            this.bAnmelden.Location = new System.Drawing.Point(357, 445);
+            this.bAnmelden.Location = new System.Drawing.Point(114, 445);
             this.bAnmelden.Name = "bAnmelden";
-            this.bAnmelden.Size = new System.Drawing.Size(83, 38);
+            this.bAnmelden.Size = new System.Drawing.Size(93, 38);
             this.bAnmelden.TabIndex = 2;
             this.bAnmelden.Text = "Anmelden";
             this.bAnmelden.UseVisualStyleBackColor = true;
@@ -73,11 +66,11 @@
             // 
             // bRegestrieren
             // 
-            this.bRegestrieren.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRegestrieren.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegestrieren.ForeColor = System.Drawing.Color.Navy;
-            this.bRegestrieren.Location = new System.Drawing.Point(152, 445);
+            this.bRegestrieren.Location = new System.Drawing.Point(347, 445);
             this.bRegestrieren.Name = "bRegestrieren";
-            this.bRegestrieren.Size = new System.Drawing.Size(83, 38);
+            this.bRegestrieren.Size = new System.Drawing.Size(93, 38);
             this.bRegestrieren.TabIndex = 3;
             this.bRegestrieren.Text = "Registrieren";
             this.bRegestrieren.UseVisualStyleBackColor = true;
@@ -102,7 +95,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(149, 305);
+            this.label1.Location = new System.Drawing.Point(111, 305);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 5;
@@ -116,29 +109,54 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(149, 367);
+            this.label2.Location = new System.Drawing.Point(111, 367);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Passwort";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // Form1
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(253, 425);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(187, 17);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "kein Konto? erstelllen Sie eins";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(112, 393);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(328, 29);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.UseSystemPasswordChar = true;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bRegestrieren);
             this.Controls.Add(this.bAnmelden);
-            this.Controls.Add(this.tfPasswort);
             this.Controls.Add(this.tfBenutzername);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "HappyA+";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -150,12 +168,13 @@
         #endregion
 
         private System.Windows.Forms.TextBox tfBenutzername;
-        private System.Windows.Forms.TextBox tfPasswort;
         private System.Windows.Forms.Button bAnmelden;
         private System.Windows.Forms.Button bRegestrieren;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
