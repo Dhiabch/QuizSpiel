@@ -8,14 +8,18 @@ namespace QuizSpiel
 {
     internal class Benutzer
     {
-
+       
         private String name;
         private String passwort;
         private int id;
 
+        public Benutzer()
+        { }
+
+
         public String getBenutzer()
         {
-            
+            return name;
         }
     }
 }
