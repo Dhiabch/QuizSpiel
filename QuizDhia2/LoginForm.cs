@@ -25,6 +25,11 @@ namespace QuizDhia2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Neue Instanz von RegisterForm erstellen
+            RegisterForm registerForm = new RegisterForm();
+
+            // Zeige das RegisterForm an
+            registerForm.Show();
 
         }
 
