@@ -13,20 +13,9 @@ namespace QuizSpiel
         private String passwort;
         private int id;
 
-        public void Benuter()
+        public String getBenutzer()
         {
             
         }
-     
-
-        public String getBenuter(string benutzer)
-        {
-            return benutzer;
-        }
-
-
-
-
-
     }
 }
