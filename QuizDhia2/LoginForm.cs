@@ -27,8 +27,13 @@ namespace QuizDhia2
         {
             // Neue Instanz von RegisterForm erstellen
             RegisterForm registerForm = new RegisterForm();
+            // Berechne die Position des RegisterForm, um es neben LoginForm zu öffnen
+            // LoginForm.Location gibt die aktuelle Position von LoginForm zurück
+            // Wir fügen z.B. 10 Pixel zum X-Wert hinzu, um es rechts daneben zu platzieren
+            registerForm.StartPosition = FormStartPosition.Manual; // Manuelle Positionierung
+            registerForm.Location = new Point(this.Location.X + this.Width, this.Location.Y); // Direkt neben LoginForm
 
-            // Zeige das RegisterForm an
+            // Zeige RegisterForm
             registerForm.Show();
 
         }

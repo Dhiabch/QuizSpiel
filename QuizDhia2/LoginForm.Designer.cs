@@ -46,7 +46,7 @@
             this.tfBenutzername.AccessibleName = "";
             this.tfBenutzername.BackColor = System.Drawing.Color.White;
             this.tfBenutzername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tfBenutzername.Location = new System.Drawing.Point(114, 325);
+            this.tfBenutzername.Location = new System.Drawing.Point(132, 270);
             this.tfBenutzername.Multiline = true;
             this.tfBenutzername.Name = "tfBenutzername";
             this.tfBenutzername.Size = new System.Drawing.Size(326, 30);
@@ -57,7 +57,7 @@
             // 
             this.bAnmelden.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAnmelden.ForeColor = System.Drawing.Color.Navy;
-            this.bAnmelden.Location = new System.Drawing.Point(114, 462);
+            this.bAnmelden.Location = new System.Drawing.Point(132, 407);
             this.bAnmelden.Name = "bAnmelden";
             this.bAnmelden.Size = new System.Drawing.Size(93, 38);
             this.bAnmelden.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             this.bRegestrieren.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegestrieren.ForeColor = System.Drawing.Color.Navy;
-            this.bRegestrieren.Location = new System.Drawing.Point(347, 462);
+            this.bRegestrieren.Location = new System.Drawing.Point(365, 407);
             this.bRegestrieren.Name = "bRegestrieren";
             this.bRegestrieren.Size = new System.Drawing.Size(93, 38);
             this.bRegestrieren.TabIndex = 3;
@@ -81,9 +81,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(114, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(130, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(358, 239);
+            this.pictureBox1.Size = new System.Drawing.Size(345, 211);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -96,7 +96,7 @@
             this.lBenutzername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lBenutzername.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBenutzername.ForeColor = System.Drawing.Color.White;
-            this.lBenutzername.Location = new System.Drawing.Point(111, 305);
+            this.lBenutzername.Location = new System.Drawing.Point(129, 250);
             this.lBenutzername.Name = "lBenutzername";
             this.lBenutzername.Size = new System.Drawing.Size(96, 17);
             this.lBenutzername.TabIndex = 5;
@@ -110,7 +110,7 @@
             this.lPasswort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lPasswort.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPasswort.ForeColor = System.Drawing.Color.White;
-            this.lPasswort.Location = new System.Drawing.Point(111, 373);
+            this.lPasswort.Location = new System.Drawing.Point(129, 318);
             this.lPasswort.Name = "lPasswort";
             this.lPasswort.Size = new System.Drawing.Size(63, 17);
             this.lPasswort.TabIndex = 6;
@@ -124,7 +124,7 @@
             this.lHinweis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lHinweis.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lHinweis.ForeColor = System.Drawing.Color.White;
-            this.lHinweis.Location = new System.Drawing.Point(253, 442);
+            this.lHinweis.Location = new System.Drawing.Point(271, 387);
             this.lHinweis.Name = "lHinweis";
             this.lHinweis.Size = new System.Drawing.Size(187, 17);
             this.lHinweis.TabIndex = 7;
@@ -134,7 +134,7 @@
             // txtPasswort
             // 
             this.txtPasswort.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswort.Location = new System.Drawing.Point(112, 393);
+            this.txtPasswort.Location = new System.Drawing.Point(130, 338);
             this.txtPasswort.Multiline = true;
             this.txtPasswort.Name = "txtPasswort";
             this.txtPasswort.PasswordChar = '*';
@@ -148,7 +148,7 @@
             this.cbViewPasswort.BackColor = System.Drawing.Color.Transparent;
             this.cbViewPasswort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbViewPasswort.ForeColor = System.Drawing.Color.White;
-            this.cbViewPasswort.Location = new System.Drawing.Point(446, 403);
+            this.cbViewPasswort.Location = new System.Drawing.Point(464, 348);
             this.cbViewPasswort.Name = "cbViewPasswort";
             this.cbViewPasswort.Size = new System.Drawing.Size(51, 19);
             this.cbViewPasswort.TabIndex = 9;
@@ -172,6 +172,7 @@
             this.Controls.Add(this.bRegestrieren);
             this.Controls.Add(this.bAnmelden);
             this.Controls.Add(this.tfBenutzername);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.Text = "HappyA+";
