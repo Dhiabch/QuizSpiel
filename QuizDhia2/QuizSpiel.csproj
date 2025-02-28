@@ -48,7 +48,9 @@
   <ItemGroup>
     <Compile Include="Antwort.cs" />
     <Compile Include="Benutzer.cs" />
-    <Compile Include="Datenbank_Verbindung.cs" />
+    <Compile Include="Datenbank_Verbindung.cs">
+      <CustomToolNamespace>QuizSpiel</CustomToolNamespace>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
