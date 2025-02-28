@@ -33,10 +33,11 @@
             this.bAnmelden = new System.Windows.Forms.Button();
             this.bRegestrieren = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lBenutzername = new System.Windows.Forms.Label();
+            this.lPasswort = new System.Windows.Forms.Label();
+            this.lHinweis = new System.Windows.Forms.Label();
+            this.txtPasswort = new System.Windows.Forms.TextBox();
+            this.cbViewPasswort = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             // 
             this.bAnmelden.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAnmelden.ForeColor = System.Drawing.Color.Navy;
-            this.bAnmelden.Location = new System.Drawing.Point(114, 445);
+            this.bAnmelden.Location = new System.Drawing.Point(114, 462);
             this.bAnmelden.Name = "bAnmelden";
             this.bAnmelden.Size = new System.Drawing.Size(93, 38);
             this.bAnmelden.TabIndex = 2;
@@ -68,7 +69,7 @@
             // 
             this.bRegestrieren.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegestrieren.ForeColor = System.Drawing.Color.Navy;
-            this.bRegestrieren.Location = new System.Drawing.Point(347, 445);
+            this.bRegestrieren.Location = new System.Drawing.Point(347, 462);
             this.bRegestrieren.Name = "bRegestrieren";
             this.bRegestrieren.Size = new System.Drawing.Size(93, 38);
             this.bRegestrieren.TabIndex = 3;
@@ -88,57 +89,72 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // lBenutzername
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(111, 305);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Benutzername";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lBenutzername.AutoSize = true;
+            this.lBenutzername.BackColor = System.Drawing.Color.Transparent;
+            this.lBenutzername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lBenutzername.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lBenutzername.ForeColor = System.Drawing.Color.White;
+            this.lBenutzername.Location = new System.Drawing.Point(111, 305);
+            this.lBenutzername.Name = "lBenutzername";
+            this.lBenutzername.Size = new System.Drawing.Size(96, 17);
+            this.lBenutzername.TabIndex = 5;
+            this.lBenutzername.Text = "Benutzername";
+            this.lBenutzername.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // lPasswort
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(111, 367);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Passwort";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            this.lPasswort.AutoSize = true;
+            this.lPasswort.BackColor = System.Drawing.Color.Transparent;
+            this.lPasswort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lPasswort.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPasswort.ForeColor = System.Drawing.Color.White;
+            this.lPasswort.Location = new System.Drawing.Point(111, 373);
+            this.lPasswort.Name = "lPasswort";
+            this.lPasswort.Size = new System.Drawing.Size(63, 17);
+            this.lPasswort.TabIndex = 6;
+            this.lPasswort.Text = "Passwort";
+            this.lPasswort.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // label3
+            // lHinweis
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(253, 425);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "kein Konto? erstelllen Sie eins";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lHinweis.AutoSize = true;
+            this.lHinweis.BackColor = System.Drawing.Color.Transparent;
+            this.lHinweis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lHinweis.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lHinweis.ForeColor = System.Drawing.Color.White;
+            this.lHinweis.Location = new System.Drawing.Point(253, 442);
+            this.lHinweis.Name = "lHinweis";
+            this.lHinweis.Size = new System.Drawing.Size(187, 17);
+            this.lHinweis.TabIndex = 7;
+            this.lHinweis.Text = "kein Konto? erstelllen Sie eins";
+            this.lHinweis.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox1
+            // txtPasswort
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 393);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 29);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.UseSystemPasswordChar = true;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.txtPasswort.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswort.Location = new System.Drawing.Point(112, 393);
+            this.txtPasswort.Multiline = true;
+            this.txtPasswort.Name = "txtPasswort";
+            this.txtPasswort.PasswordChar = '*';
+            this.txtPasswort.Size = new System.Drawing.Size(328, 29);
+            this.txtPasswort.TabIndex = 8;
+            this.txtPasswort.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // cbViewPasswort
+            // 
+            this.cbViewPasswort.AutoSize = true;
+            this.cbViewPasswort.BackColor = System.Drawing.Color.Transparent;
+            this.cbViewPasswort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbViewPasswort.ForeColor = System.Drawing.Color.White;
+            this.cbViewPasswort.Location = new System.Drawing.Point(446, 403);
+            this.cbViewPasswort.Name = "cbViewPasswort";
+            this.cbViewPasswort.Size = new System.Drawing.Size(51, 19);
+            this.cbViewPasswort.TabIndex = 9;
+            this.cbViewPasswort.Text = "View";
+            this.cbViewPasswort.UseVisualStyleBackColor = false;
+            this.cbViewPasswort.CheckedChanged += new System.EventHandler(this.cbViewPasswort_CheckedChanged);
             // 
             // LoginForm
             // 
@@ -147,10 +163,11 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(584, 561);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbViewPasswort);
+            this.Controls.Add(this.txtPasswort);
+            this.Controls.Add(this.lHinweis);
+            this.Controls.Add(this.lPasswort);
+            this.Controls.Add(this.lBenutzername);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bRegestrieren);
             this.Controls.Add(this.bAnmelden);
@@ -171,10 +188,11 @@
         private System.Windows.Forms.Button bAnmelden;
         private System.Windows.Forms.Button bRegestrieren;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lBenutzername;
+        private System.Windows.Forms.Label lPasswort;
+        private System.Windows.Forms.Label lHinweis;
+        private System.Windows.Forms.TextBox txtPasswort;
+        private System.Windows.Forms.CheckBox cbViewPasswort;
     }
 }
 
