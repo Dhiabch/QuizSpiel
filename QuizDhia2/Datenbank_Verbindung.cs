@@ -12,13 +12,11 @@ namespace QuizDhia2
 {
     internal class Datenbank_Verbindung
     {
-        private static string connetionString;
         private static SqlConnection cnn;
 
         public static void createConnection()
         {
-            connetionString = "Server=(localdb)\\Projects;Integrated Security=true; database=QuizSpiel";
-            cnn = new SqlConnection(connetionString);
+            cnn = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Integrated Security=true; database=QuizSpiel");
         }
         public static void openCnn()
         {
@@ -29,6 +27,21 @@ namespace QuizDhia2
         public static void closeCnn()
         {
             cnn.Close();
+        }
+
+        public static string getPasswortBenutzer(string benutzerID)
+        {
+            openCnn();
+            string sql = $"SELECT benutzerID, " +
+                "passwort" +
+                " FROM tbBenutzer " +
+                "where benutzerID = " + benutzerID + ";";
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            da.Fill(dt);
+            DataRow dr = dt.Rows[0];
+            closeCnn();
+            return dr["password"].ToString();
         }
     }
 }
