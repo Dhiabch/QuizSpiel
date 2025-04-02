@@ -22,6 +22,7 @@ namespace QuizDhia2
             else
             {
                 lHinweis.Visible = true;
+                lHinweis.Text = "Sie haben keinen Konto bei uns";
             }
         }
     }

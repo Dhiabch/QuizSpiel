@@ -62,7 +62,7 @@
             this.bLogin.TabIndex = 2;
             this.bLogin.Text = "Anmelden";
             this.bLogin.UseVisualStyleBackColor = true;
-            this.bLogin.Click += new System.EventHandler(this.button1_Click);
+            this.bLogin.Click += new System.EventHandler(this.bLogin_Click);
             // 
             // bSignUp
             // 
@@ -86,7 +86,6 @@
             this.bild_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.bild_Logo.TabIndex = 4;
             this.bild_Logo.TabStop = false;
-            this.bild_Logo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lBenutzername
             // 
@@ -100,7 +99,6 @@
             this.lBenutzername.Size = new System.Drawing.Size(96, 17);
             this.lBenutzername.TabIndex = 5;
             this.lBenutzername.Text = "Benutzername";
-            this.lBenutzername.Click += new System.EventHandler(this.label1_Click);
             // 
             // lPasswort
             // 
@@ -114,7 +112,6 @@
             this.lPasswort.Size = new System.Drawing.Size(63, 17);
             this.lPasswort.TabIndex = 6;
             this.lPasswort.Text = "Passwort";
-            this.lPasswort.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // lHinweis
             // 
@@ -125,10 +122,9 @@
             this.lHinweis.ForeColor = System.Drawing.Color.White;
             this.lHinweis.Location = new System.Drawing.Point(271, 387);
             this.lHinweis.Name = "lHinweis";
-            this.lHinweis.Size = new System.Drawing.Size(187, 17);
+            this.lHinweis.Size = new System.Drawing.Size(0, 17);
             this.lHinweis.TabIndex = 7;
-            this.lHinweis.Text = "kein Konto? erstelllen Sie eins";
-            this.lHinweis.Click += new System.EventHandler(this.label3_Click);
+            this.lHinweis.Visible = false;
             // 
             // txtPassword
             // 
@@ -139,7 +135,6 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(328, 29);
             this.txtPassword.TabIndex = 8;
-            this.txtPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // cbViewPassword
             // 

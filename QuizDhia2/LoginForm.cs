@@ -49,5 +49,10 @@ namespace QuizDhia2
                 txtPassword.UseSystemPasswordChar = false;
             }
         }
+
+        private void bLogin_Click(object sender, EventArgs e)
+        {
+            SignUp_Logic.LoginUserName(Username, lHinweis, StartForm);
+        }
     }
 }
