@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.txtUserID = new System.Windows.Forms.TextBox();
+            this.Username = new System.Windows.Forms.TextBox();
             this.bLogin = new System.Windows.Forms.Button();
             this.bSignUp = new System.Windows.Forms.Button();
             this.bild_Logo = new System.Windows.Forms.PictureBox();
@@ -41,17 +41,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.bild_Logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtUserID
+            // Username
             // 
-            this.txtUserID.AccessibleName = "";
-            this.txtUserID.BackColor = System.Drawing.Color.White;
-            this.txtUserID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserID.Location = new System.Drawing.Point(132, 270);
-            this.txtUserID.Multiline = true;
-            this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(326, 30);
-            this.txtUserID.TabIndex = 0;
-            this.txtUserID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Username.AccessibleName = "";
+            this.Username.BackColor = System.Drawing.Color.White;
+            this.Username.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.Location = new System.Drawing.Point(132, 270);
+            this.Username.Multiline = true;
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(326, 30);
+            this.Username.TabIndex = 0;
+            this.Username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // bLogin
             // 
@@ -171,7 +171,7 @@
             this.Controls.Add(this.bild_Logo);
             this.Controls.Add(this.bSignUp);
             this.Controls.Add(this.bLogin);
-            this.Controls.Add(this.txtUserID);
+            this.Controls.Add(this.Username);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "LoginForm";
@@ -185,7 +185,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUserID;
+        private System.Windows.Forms.TextBox Username;
         private System.Windows.Forms.Button bLogin;
         private System.Windows.Forms.Button bSignUp;
         private System.Windows.Forms.PictureBox bild_Logo;
