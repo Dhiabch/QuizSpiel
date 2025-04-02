@@ -33,6 +33,7 @@
             this.gbCreateQuestion = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SubmitQuestion = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.gbCreateQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +76,15 @@
             this.SubmitQuestion.TabIndex = 3;
             this.SubmitQuestion.Text = "Submit";
             this.SubmitQuestion.UseVisualStyleBackColor = true;
-
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(503, 439);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Aiana";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // StartForm
             // 
@@ -84,6 +93,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 761);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.SubmitQuestion);
             this.Controls.Add(this.gbCreateQuestion);
             this.Controls.Add(this.label1);
@@ -103,5 +113,6 @@
         private System.Windows.Forms.GroupBox gbCreateQuestion;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button SubmitQuestion;
+        private System.Windows.Forms.Button button1;
     }
 }
