@@ -13,9 +13,16 @@ namespace QuizDhia2
         User benutzer = new User();
         
 
-        private void LoginUserName(TextBox tfBenutzername)
+        public static void LoginUserName(TextBox Username, Label lHinweis, Form StartForm)
         {
-            Database_Connect.findUserByID(tfBenutzername.Text);
+            if (Database_Connect.findUserByID(Username.Text))
+            {
+                StartForm.Show();
+            }
+            else
+            {
+                lHinweis.Visible = true;
+            }
         }
     }
 }

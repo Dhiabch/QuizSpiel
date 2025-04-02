@@ -51,7 +51,6 @@
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(326, 30);
             this.Username.TabIndex = 0;
-            this.Username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // bLogin
             // 
