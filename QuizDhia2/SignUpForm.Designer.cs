@@ -1,6 +1,6 @@
 ﻿namespace QuizDhia2
 {
-    partial class RegisterForm
+    partial class SignUpForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
-            this.txtPasswortbestaetigen = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
+            this.txtConfirm = new System.Windows.Forms.TextBox();
             this.lPasswortBestaetigen = new System.Windows.Forms.Label();
-            this.TxtPasswortEingabe = new System.Windows.Forms.TextBox();
+            this.txtCreatepassword = new System.Windows.Forms.TextBox();
             this.lPasswortEingabe = new System.Windows.Forms.Label();
-            this.TxtBenutzernameEingabe = new System.Windows.Forms.TextBox();
-            this.TxtNachnameEingabe = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtLastname = new System.Windows.Forms.TextBox();
             this.lNachname = new System.Windows.Forms.Label();
             this.lBenutzerName = new System.Windows.Forms.Label();
-            this.TxtVornameEingabe = new System.Windows.Forms.TextBox();
+            this.txtFirstname = new System.Windows.Forms.TextBox();
             this.lVorname = new System.Windows.Forms.Label();
             this.bKontoErstellen = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtPasswortbestaetigen
+            // txtConfirm
             // 
-            this.txtPasswortbestaetigen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswortbestaetigen.Location = new System.Drawing.Point(47, 408);
-            this.txtPasswortbestaetigen.Multiline = true;
-            this.txtPasswortbestaetigen.Name = "txtPasswortbestaetigen";
-            this.txtPasswortbestaetigen.PasswordChar = '*';
-            this.txtPasswortbestaetigen.Size = new System.Drawing.Size(192, 29);
-            this.txtPasswortbestaetigen.TabIndex = 12;
+            this.txtConfirm.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirm.Location = new System.Drawing.Point(47, 408);
+            this.txtConfirm.Multiline = true;
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.PasswordChar = '*';
+            this.txtConfirm.Size = new System.Drawing.Size(192, 29);
+            this.txtConfirm.TabIndex = 12;
             // 
             // lPasswortBestaetigen
             // 
@@ -67,17 +67,17 @@
             this.lPasswortBestaetigen.TabIndex = 11;
             this.lPasswortBestaetigen.Text = "Passwort bestätigen";
             // 
-            // TxtPasswortEingabe
+            // txtCreatepassword
             // 
-            this.TxtPasswortEingabe.AccessibleName = "";
-            this.TxtPasswortEingabe.BackColor = System.Drawing.Color.White;
-            this.TxtPasswortEingabe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPasswortEingabe.Location = new System.Drawing.Point(49, 340);
-            this.TxtPasswortEingabe.Multiline = true;
-            this.TxtPasswortEingabe.Name = "TxtPasswortEingabe";
-            this.TxtPasswortEingabe.PasswordChar = '*';
-            this.TxtPasswortEingabe.Size = new System.Drawing.Size(190, 30);
-            this.TxtPasswortEingabe.TabIndex = 10;
+            this.txtCreatepassword.AccessibleName = "";
+            this.txtCreatepassword.BackColor = System.Drawing.Color.White;
+            this.txtCreatepassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreatepassword.Location = new System.Drawing.Point(49, 340);
+            this.txtCreatepassword.Multiline = true;
+            this.txtCreatepassword.Name = "txtCreatepassword";
+            this.txtCreatepassword.PasswordChar = '*';
+            this.txtCreatepassword.Size = new System.Drawing.Size(190, 30);
+            this.txtCreatepassword.TabIndex = 10;
             // 
             // lPasswortEingabe
             // 
@@ -93,25 +93,25 @@
             this.lPasswortEingabe.Text = "Passwort";
             this.lPasswortEingabe.Click += new System.EventHandler(this.label1_Click);
             // 
-            // TxtBenutzernameEingabe
+            // txtUsername
             // 
-            this.TxtBenutzernameEingabe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBenutzernameEingabe.Location = new System.Drawing.Point(49, 277);
-            this.TxtBenutzernameEingabe.Multiline = true;
-            this.TxtBenutzernameEingabe.Name = "TxtBenutzernameEingabe";
-            this.TxtBenutzernameEingabe.Size = new System.Drawing.Size(190, 29);
-            this.TxtBenutzernameEingabe.TabIndex = 15;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(49, 277);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(190, 29);
+            this.txtUsername.TabIndex = 15;
             // 
-            // TxtNachnameEingabe
+            // txtLastname
             // 
-            this.TxtNachnameEingabe.AccessibleName = "";
-            this.TxtNachnameEingabe.BackColor = System.Drawing.Color.White;
-            this.TxtNachnameEingabe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNachnameEingabe.Location = new System.Drawing.Point(49, 215);
-            this.TxtNachnameEingabe.Multiline = true;
-            this.TxtNachnameEingabe.Name = "TxtNachnameEingabe";
-            this.TxtNachnameEingabe.Size = new System.Drawing.Size(190, 30);
-            this.TxtNachnameEingabe.TabIndex = 14;
+            this.txtLastname.AccessibleName = "";
+            this.txtLastname.BackColor = System.Drawing.Color.White;
+            this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastname.Location = new System.Drawing.Point(49, 215);
+            this.txtLastname.Multiline = true;
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(190, 30);
+            this.txtLastname.TabIndex = 14;
             // 
             // lNachname
             // 
@@ -140,14 +140,14 @@
             this.lBenutzerName.Text = "Benutzername";
             this.lBenutzerName.Click += new System.EventHandler(this.label3_Click);
             // 
-            // TxtVornameEingabe
+            // txtFirstname
             // 
-            this.TxtVornameEingabe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtVornameEingabe.Location = new System.Drawing.Point(49, 150);
-            this.TxtVornameEingabe.Multiline = true;
-            this.TxtVornameEingabe.Name = "TxtVornameEingabe";
-            this.TxtVornameEingabe.Size = new System.Drawing.Size(190, 29);
-            this.TxtVornameEingabe.TabIndex = 18;
+            this.txtFirstname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.Location = new System.Drawing.Point(49, 150);
+            this.txtFirstname.Multiline = true;
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(190, 29);
+            this.txtFirstname.TabIndex = 18;
             // 
             // lVorname
             // 
@@ -194,15 +194,15 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bKontoErstellen);
             this.Controls.Add(this.lVorname);
-            this.Controls.Add(this.TxtVornameEingabe);
+            this.Controls.Add(this.txtFirstname);
             this.Controls.Add(this.lBenutzerName);
             this.Controls.Add(this.lNachname);
-            this.Controls.Add(this.TxtBenutzernameEingabe);
-            this.Controls.Add(this.TxtNachnameEingabe);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtLastname);
             this.Controls.Add(this.lPasswortEingabe);
-            this.Controls.Add(this.txtPasswortbestaetigen);
+            this.Controls.Add(this.txtConfirm);
             this.Controls.Add(this.lPasswortBestaetigen);
-            this.Controls.Add(this.TxtPasswortEingabe);
+            this.Controls.Add(this.txtCreatepassword);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -217,15 +217,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtPasswortbestaetigen;
+        private System.Windows.Forms.TextBox txtConfirm;
         private System.Windows.Forms.Label lPasswortBestaetigen;
-        private System.Windows.Forms.TextBox TxtPasswortEingabe;
+        private System.Windows.Forms.TextBox txtCreatepassword;
         private System.Windows.Forms.Label lPasswortEingabe;
-        private System.Windows.Forms.TextBox TxtBenutzernameEingabe;
-        private System.Windows.Forms.TextBox TxtNachnameEingabe;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtLastname;
         private System.Windows.Forms.Label lNachname;
         private System.Windows.Forms.Label lBenutzerName;
-        private System.Windows.Forms.TextBox TxtVornameEingabe;
+        private System.Windows.Forms.TextBox txtFirstname;
         private System.Windows.Forms.Label lVorname;
         private System.Windows.Forms.Button bKontoErstellen;
         private System.Windows.Forms.PictureBox pictureBox1;

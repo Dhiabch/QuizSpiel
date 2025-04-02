@@ -26,7 +26,7 @@ namespace QuizDhia2
         private void button2_Click(object sender, EventArgs e)
         {
             // Neue Instanz von RegisterForm erstellen
-            RegisterForm registerForm = new RegisterForm();
+            SignUpForm registerForm = new SignUpForm();
             // Berechne die Position des RegisterForm, um es neben LoginForm zu öffnen
             // LoginForm.Location gibt die aktuelle Position von LoginForm zurück
             // Wir fügen z.B. 10 Pixel zum X-Wert hinzu, um es rechts daneben zu platzieren
@@ -91,13 +91,13 @@ namespace QuizDhia2
 
         private void cbViewPasswort_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbViewPasswort.CheckState == CheckState.Checked)
+            if (cbViewPassword.CheckState == CheckState.Checked)
             {
-                txtPasswort.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = true;
             }
             else
             {
-                txtPasswort.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar = false;
             }
         }
     }
