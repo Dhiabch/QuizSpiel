@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gbCreateQuestion = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SubmitQuestion = new System.Windows.Forms.Button();
             this.gbCreateQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,16 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // SubmitQuestion
+            // 
+            this.SubmitQuestion.Location = new System.Drawing.Point(503, 389);
+            this.SubmitQuestion.Name = "SubmitQuestion";
+            this.SubmitQuestion.Size = new System.Drawing.Size(75, 23);
+            this.SubmitQuestion.TabIndex = 3;
+            this.SubmitQuestion.Text = "Submit";
+            this.SubmitQuestion.UseVisualStyleBackColor = true;
+            this.SubmitQuestion.Click += new System.EventHandler(this.button1_Click);
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -75,6 +86,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 761);
+            this.Controls.Add(this.SubmitQuestion);
             this.Controls.Add(this.gbCreateQuestion);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -92,5 +104,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbCreateQuestion;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button SubmitQuestion;
     }
 }
