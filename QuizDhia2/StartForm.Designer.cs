@@ -75,7 +75,7 @@
             this.SubmitQuestion.TabIndex = 3;
             this.SubmitQuestion.Text = "Submit";
             this.SubmitQuestion.UseVisualStyleBackColor = true;
-            this.SubmitQuestion.Click += new System.EventHandler(this.button1_Click);
+
             // 
             // StartForm
             // 
