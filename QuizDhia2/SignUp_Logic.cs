@@ -8,13 +8,14 @@ using System.Windows.Forms;
 
 namespace QuizDhia2
 {
-    internal class Registr_Logik
+    internal class SignUp_Logic
     {
-        Benutzer benutzer = new Benutzer();
+        User benutzer = new User();
+        
 
-        private void LoginBenutzerName(TextBox tfBenutzername)
+        private void LoginUserName(TextBox tfBenutzername)
         {
-
+            Database_Connect.findUserByID(tfBenutzername.Text);
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Drawing;
 
 namespace QuizDhia2
 {
-    internal class Datenbank_Verbindung
+    internal class Database_Connect
     {
         private static SqlConnection cnn;
 
@@ -28,14 +28,31 @@ namespace QuizDhia2
         {
             cnn.Close();
         }
-
-        public static string getPasswortBenutzer(string benutzerID)
+        public static bool findUserByID(string userName)
         {
             openCnn();
-            string sql = $"SELECT benutzerID, " +
-                "passwort" +
+            string sql = "SELECT * " +
+                         "FROM tbEmployee " +
+                         "WHERE employeeID = " + userName + ";";
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            da.Fill(dt);
+
+            if (dt.Rows.Count < 1)
+            {
+                closeCnn();
+                return false;
+            }
+            closeCnn();
+            return true;
+        }    
+        public static string getPasswordUser(string userName)
+        {
+            openCnn();
+            string sql = $"SELECT userID, " +
+                "password" +
                 " FROM tbBenutzer " +
-                "where benutzerID = " + benutzerID + ";";
+                "where userID = " + userName + ";";
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
             da.Fill(dt);
