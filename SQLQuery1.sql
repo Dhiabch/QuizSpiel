@@ -1,4 +1,3 @@
-﻿
 /* Datenbank erzeugen, falls bereits existiert, vorher löschen */
 
 IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'QuizSpiel') CREATE DATABASE QuizSpiel
@@ -12,36 +11,36 @@ USE QuizSpiel
 
 
 /* Falls Tabellen bereits existieren, sollen sie vorher gelöscht werden */
-IF EXISTS(SELECT * FROM Information_Schema.Tables WHERE Table_Name = 'tblBenutzer')
-  DROP TABLE tblBenutzer
+IF EXISTS(SELECT * FROM Information_Schema.Tables WHERE Table_Name = 'tblUser')
+  DROP TABLE tblUser
 
-IF EXISTS(SELECT * FROM Information_Schema.Tables WHERE Table_Name = 'tblAntwort')
-  DROP TABLE tblAntwort
+IF EXISTS(SELECT * FROM Information_Schema.Tables WHERE Table_Name = 'tblAnswer')
+  DROP TABLE tblAnswer
 
-IF EXISTS(SELECT * FROM Information_Schema.Tables WHERE Table_Name = 'tblFrage')
-  DROP TABLE tblFrage
+IF EXISTS(SELECT * FROM Information_Schema.Tables WHERE Table_Name = 'tblQuestion')
+  DROP TABLE tblQuestion
 
 
 /* Neue Tabellen kreieren */
 
-CREATE TABLE tblBenutzer (
-       benutzerId int IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE tblUser (
+       userID int IDENTITY(1,1) PRIMARY KEY,
        email varchar(50),
-       passwort varchar(128),
+       password varchar(128),
        
 );
 
-CREATE TABLE tblAntwort (
-       antwortId int IDENTITY(1,1) PRIMARY KEY,
-       beschreibung varchar(1000),
+CREATE TABLE tblAnswer (
+       answerID int IDENTITY(1,1) PRIMARY KEY,
+       answerDescription varchar(1000),
 );
 
 GO
 
-CREATE TABLE tblFrage (
-        frageId int IDENTITY(1,1) PRIMARY KEY,
-        antwortId int FOREIGN KEY (antwortId) REFERENCES tblAntwort(antwortId),
-        beschreibung varchar(1000),);
+CREATE TABLE tblQuestion (
+        questionID int IDENTITY(1,1) PRIMARY KEY,
+        answerID int FOREIGN KEY (answerID) REFERENCES tblAnswer(answerID),
+        questionDescription varchar(1000),);
 
 
 
@@ -49,16 +48,13 @@ CREATE TABLE tblFrage (
 /* Tabellen mit Werten befüllen */
  
 
-INSERT INTO tblBenutzer (email) VALUES ('Blanke@gmail.com');
-INSERT INTO tblBenutzer (passwort) VALUES ('hdfgsldjfhgsdlj');
+INSERT INTO tblUser (email, password) VALUES ('Blanke@gmail.com', 'hdfgsldjfhgsdlj');
+
+INSERT INTO tblQuestion (questionDescription) VALUES ('Was ist sql?');
 
 
- 
-INSERT INTO tblFrage (beschreibung) VALUES ('Was ist sql?');
-
-
-INSERT INTO tblAntwort(beschreibung) VALUES ('Das ist Test');
+INSERT INTO tblAnswer (answerDescription) VALUES ('Das ist Test');
 
 
 
-Select  * from tblAntwort
+Select  * from tblAnswer
