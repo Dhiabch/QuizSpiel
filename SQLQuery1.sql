@@ -25,7 +25,9 @@ IF EXISTS(SELECT * FROM Information_Schema.Tables WHERE Table_Name = 'tblQuestio
 
 CREATE TABLE tblUser (
        userID int IDENTITY(1,1) PRIMARY KEY,
-       email varchar(50),
+       userFirstname varchar(50),
+       userLastname varchar(50),
+       userName varchar(50),
        password varchar(128),
        
 );
@@ -48,7 +50,7 @@ CREATE TABLE tblQuestion (
 /* Tabellen mit Werten befüllen */
  
 
-INSERT INTO tblUser (email, password) VALUES ('Blanke@gmail.com', 'hdfgsldjfhgsdlj');
+INSERT INTO tblUser (userName, password) VALUES ('aianaDzhei', 'hdfgsldjfhgsdlj');
 
 INSERT INTO tblQuestion (questionDescription) VALUES ('Was ist sql?');
 
@@ -57,4 +59,4 @@ INSERT INTO tblAnswer (answerDescription) VALUES ('Das ist Test');
 
 
 
-Select  * from tblAnswer
+Select  * from tblUser
