@@ -20,8 +20,15 @@ namespace QuizDhia2
         }
         public static void openCnn()
         {
-            if (cnn.State != ConnectionState.Open)
+            try
+            {
                 cnn.Open();
+                Console.WriteLine("Connected to MySQL Database!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
         }
 
         public static void closeCnn()
@@ -32,8 +39,8 @@ namespace QuizDhia2
         {
             openCnn();
             string sql = "SELECT * " +
-                         "FROM tbEmployee " +
-                         "WHERE employeeID = " + userName + ";";
+                         "FROM tblUser " +
+                         "WHERE userName = " + userName + ";";
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
             da.Fill(dt);
@@ -46,19 +53,30 @@ namespace QuizDhia2
             closeCnn();
             return true;
         }    
-        public static string getPasswordUser(string userName)
+        private static string getPasswordUser(string userName)
         {
             openCnn();
-            string sql = $"SELECT userID, " +
+            string sql = $"SELECT userName, " +
                 "password" +
-                " FROM tbBenutzer " +
-                "where userID = " + userName + ";";
+                " FROM tblUser " +
+                "where userName = " + userName + ";";
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
             da.Fill(dt);
             DataRow dr = dt.Rows[0];
             closeCnn();
             return dr["password"].ToString();
+        }
+        public static bool checkPassword(string userName, string userPassword)
+        {
+            if (getPasswordUser(userName) == userPassword)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

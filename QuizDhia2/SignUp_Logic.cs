@@ -13,11 +13,18 @@ namespace QuizDhia2
         User benutzer = new User();
         
 
-        public static void LoginUserName(TextBox Username, Label lHinweis, Form StartForm)
+        public static void LoginUserName(TextBox Username, TextBox txtPassword, Label lHinweis, Form StartForm)
         {
             if (Database_Connect.findUserByID(Username.Text))
             {
-                StartForm.Show();
+                if (Database_Connect.checkPassword(Username.Text, txtPassword.Text))
+                {
+                    StartForm.Show();
+                }
+                else
+                {
+                    lHinweis.Text = "Falsche Passwort!";
+                }
             }
             else
             {

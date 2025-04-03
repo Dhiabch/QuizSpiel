@@ -74,7 +74,7 @@
             this.bSignUp.TabIndex = 3;
             this.bSignUp.Text = "Registrieren";
             this.bSignUp.UseVisualStyleBackColor = true;
-            this.bSignUp.Click += new System.EventHandler(this.button2_Click);
+            this.bSignUp.Click += new System.EventHandler(this.bLogin_Click);
             // 
             // bild_Logo
             // 

@@ -18,18 +18,15 @@ namespace QuizDhia2
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bSignUp_Click(object sender, EventArgs e)
         {
-            // Neue Instanz von RegisterForm erstellen
-            SignUpForm registerForm = new SignUpForm();
+            SignUpForm signUpForm = new SignUpForm();
             // Berechne die Position des RegisterForm, um es neben LoginForm zu öffnen
-            // LoginForm.Location gibt die aktuelle Position von LoginForm zurück
-            // Wir fügen z.B. 10 Pixel zum X-Wert hinzu, um es rechts daneben zu platzieren
-            registerForm.StartPosition = FormStartPosition.Manual; // Manuelle Positionierung
-            registerForm.Location = new Point(this.Location.X + this.Width, this.Location.Y); // Direkt neben LoginForm
 
-            // Zeige RegisterForm
-            registerForm.Show();
+            signUpForm.StartPosition = FormStartPosition.Manual;
+            signUpForm.Location = new Point(this.Location.X + this.Width, this.Location.Y); 
+
+            signUpForm.Show();
 
         }
 
@@ -52,7 +49,8 @@ namespace QuizDhia2
 
         private void bLogin_Click(object sender, EventArgs e)
         {
-            SignUp_Logic.LoginUserName(Username, lHinweis, StartForm);
+            StartForm StartForm = new StartForm();
+            SignUp_Logic.LoginUserName(Username, txtPassword, lHinweis, StartForm);
         }
     }
 }
