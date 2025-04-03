@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuizDhia2
 {
-    public partial class RegisterForm : Form
+    public partial class StartForm : Form
     {
-        public RegisterForm()
+        public StartForm()
         {
             InitializeComponent();
         }
