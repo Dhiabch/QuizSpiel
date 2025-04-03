@@ -55,6 +55,7 @@
             // 
             // bLogin
             // 
+            this.bLogin.BackColor = System.Drawing.SystemColors.Control;
             this.bLogin.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bLogin.ForeColor = System.Drawing.Color.Navy;
             this.bLogin.Location = new System.Drawing.Point(132, 407);
@@ -62,11 +63,12 @@
             this.bLogin.Size = new System.Drawing.Size(93, 38);
             this.bLogin.TabIndex = 2;
             this.bLogin.Text = "Anmelden";
-            this.bLogin.UseVisualStyleBackColor = true;
+            this.bLogin.UseVisualStyleBackColor = false;
             this.bLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // bSignUp
             // 
+            this.bSignUp.BackColor = System.Drawing.SystemColors.Control;
             this.bSignUp.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSignUp.ForeColor = System.Drawing.Color.Navy;
             this.bSignUp.Location = new System.Drawing.Point(365, 407);
@@ -74,7 +76,7 @@
             this.bSignUp.Size = new System.Drawing.Size(93, 38);
             this.bSignUp.TabIndex = 3;
             this.bSignUp.Text = "Registrieren";
-            this.bSignUp.UseVisualStyleBackColor = true;
+            this.bSignUp.UseVisualStyleBackColor = false;
             this.bSignUp.Click += new System.EventHandler(this.button2_Click);
             // 
             // bild_Logo

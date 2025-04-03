@@ -31,8 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.label1 = new System.Windows.Forms.Label();
             this.gbCreateQuestion = new System.Windows.Forms.GroupBox();
-            this.Question = new System.Windows.Forms.TextBox();
-            this.SubmitQuestion = new System.Windows.Forms.Button();
+            this.lKeywords = new System.Windows.Forms.Label();
+            this.lQuestion = new System.Windows.Forms.Label();
+            this.bSubmitQuestion = new System.Windows.Forms.Button();
+            this.tKeywords = new System.Windows.Forms.TextBox();
+            this.tQuestion = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ListQuestions = new System.Windows.Forms.ListBox();
+            this.bStartQuiz = new System.Windows.Forms.Button();
+            this.ldashboard = new System.Windows.Forms.Label();
             this.gbCreateQuestion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,38 +49,124 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Siemens AD Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(126, 67);
+            this.label1.Location = new System.Drawing.Point(117, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 32);
+            this.label1.Size = new System.Drawing.Size(252, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Hallo User";
+            this.label1.Text = "Willkommen Dhia !";
             // 
             // gbCreateQuestion
             // 
-            this.gbCreateQuestion.BackColor = System.Drawing.SystemColors.Desktop;
-            this.gbCreateQuestion.Controls.Add(this.Question);
-            this.gbCreateQuestion.Location = new System.Drawing.Point(132, 202);
+            this.gbCreateQuestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbCreateQuestion.Controls.Add(this.lKeywords);
+            this.gbCreateQuestion.Controls.Add(this.lQuestion);
+            this.gbCreateQuestion.Controls.Add(this.bSubmitQuestion);
+            this.gbCreateQuestion.Controls.Add(this.tKeywords);
+            this.gbCreateQuestion.Controls.Add(this.tQuestion);
+            this.gbCreateQuestion.Location = new System.Drawing.Point(123, 110);
             this.gbCreateQuestion.Name = "gbCreateQuestion";
-            this.gbCreateQuestion.Size = new System.Drawing.Size(446, 210);
+            this.gbCreateQuestion.Size = new System.Drawing.Size(446, 273);
             this.gbCreateQuestion.TabIndex = 2;
             this.gbCreateQuestion.TabStop = false;
             this.gbCreateQuestion.Visible = false;
             // 
-            // Question
+            // lKeywords
             // 
-            this.Question.Location = new System.Drawing.Point(13, 17);
-            this.Question.Name = "Question";
-            this.Question.Size = new System.Drawing.Size(418, 20);
-            this.Question.TabIndex = 0;
+            this.lKeywords.AutoSize = true;
+            this.lKeywords.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lKeywords.ForeColor = System.Drawing.Color.Navy;
+            this.lKeywords.Location = new System.Drawing.Point(21, 79);
+            this.lKeywords.Name = "lKeywords";
+            this.lKeywords.Size = new System.Drawing.Size(122, 21);
+            this.lKeywords.TabIndex = 3;
+            this.lKeywords.Text = "Keywords eingeben";
             // 
-            // SubmitQuestion
+            // lQuestion
             // 
-            this.SubmitQuestion.Location = new System.Drawing.Point(503, 418);
-            this.SubmitQuestion.Name = "SubmitQuestion";
-            this.SubmitQuestion.Size = new System.Drawing.Size(75, 23);
-            this.SubmitQuestion.TabIndex = 3;
-            this.SubmitQuestion.Text = "Submit";
-            this.SubmitQuestion.UseVisualStyleBackColor = true;
+            this.lQuestion.AutoSize = true;
+            this.lQuestion.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lQuestion.ForeColor = System.Drawing.Color.Navy;
+            this.lQuestion.Location = new System.Drawing.Point(21, 14);
+            this.lQuestion.Name = "lQuestion";
+            this.lQuestion.Size = new System.Drawing.Size(99, 21);
+            this.lQuestion.TabIndex = 2;
+            this.lQuestion.Text = "Frage eingeben";
+            // 
+            // bSubmitQuestion
+            // 
+            this.bSubmitQuestion.BackColor = System.Drawing.SystemColors.Control;
+            this.bSubmitQuestion.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSubmitQuestion.ForeColor = System.Drawing.Color.Navy;
+            this.bSubmitQuestion.Location = new System.Drawing.Point(343, 228);
+            this.bSubmitQuestion.Name = "bSubmitQuestion";
+            this.bSubmitQuestion.Size = new System.Drawing.Size(85, 32);
+            this.bSubmitQuestion.TabIndex = 3;
+            this.bSubmitQuestion.Text = "Submit";
+            this.bSubmitQuestion.UseVisualStyleBackColor = false;
+            // 
+            // tKeywords
+            // 
+            this.tKeywords.BackColor = System.Drawing.SystemColors.Control;
+            this.tKeywords.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tKeywords.Location = new System.Drawing.Point(25, 103);
+            this.tKeywords.Multiline = true;
+            this.tKeywords.Name = "tKeywords";
+            this.tKeywords.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tKeywords.Size = new System.Drawing.Size(403, 119);
+            this.tKeywords.TabIndex = 1;
+            // 
+            // tQuestion
+            // 
+            this.tQuestion.BackColor = System.Drawing.SystemColors.Control;
+            this.tQuestion.Location = new System.Drawing.Point(25, 38);
+            this.tQuestion.Multiline = true;
+            this.tQuestion.Name = "tQuestion";
+            this.tQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tQuestion.Size = new System.Drawing.Size(401, 38);
+            this.tQuestion.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(132, 509);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(0, 0);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // ListQuestions
+            // 
+            this.ListQuestions.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ListQuestions.FormattingEnabled = true;
+            this.ListQuestions.Location = new System.Drawing.Point(123, 438);
+            this.ListQuestions.Name = "ListQuestions";
+            this.ListQuestions.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ListQuestions.Size = new System.Drawing.Size(446, 134);
+            this.ListQuestions.TabIndex = 5;
+            // 
+            // bStartQuiz
+            // 
+            this.bStartQuiz.BackColor = System.Drawing.SystemColors.Control;
+            this.bStartQuiz.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bStartQuiz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bStartQuiz.Location = new System.Drawing.Point(466, 597);
+            this.bStartQuiz.Name = "bStartQuiz";
+            this.bStartQuiz.Size = new System.Drawing.Size(103, 32);
+            this.bStartQuiz.TabIndex = 6;
+            this.bStartQuiz.Text = "Start Quiz !";
+            this.bStartQuiz.UseVisualStyleBackColor = false;
+            // 
+            // ldashboard
+            // 
+            this.ldashboard.AutoSize = true;
+            this.ldashboard.BackColor = System.Drawing.Color.Transparent;
+            this.ldashboard.Font = new System.Drawing.Font("Siemens AD Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ldashboard.ForeColor = System.Drawing.Color.GhostWhite;
+            this.ldashboard.Location = new System.Drawing.Point(119, 414);
+            this.ldashboard.Name = "ldashboard";
+            this.ldashboard.Size = new System.Drawing.Size(153, 19);
+            this.ldashboard.TabIndex = 7;
+            this.ldashboard.Text = "Themen Übersicht";
             // 
             // StartForm
             // 
@@ -81,13 +174,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(784, 761);
-            this.Controls.Add(this.SubmitQuestion);
+            this.ClientSize = new System.Drawing.Size(684, 661);
+            this.Controls.Add(this.ldashboard);
+            this.Controls.Add(this.bStartQuiz);
+            this.Controls.Add(this.ListQuestions);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbCreateQuestion);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartForm";
-            this.Text = "Form1";
+            this.Text = "HappyA+";
             this.gbCreateQuestion.ResumeLayout(false);
             this.gbCreateQuestion.PerformLayout();
             this.ResumeLayout(false);
@@ -99,7 +195,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbCreateQuestion;
-        private System.Windows.Forms.TextBox Question;
-        private System.Windows.Forms.Button SubmitQuestion;
+        private System.Windows.Forms.TextBox tQuestion;
+        private System.Windows.Forms.Button bSubmitQuestion;
+        private System.Windows.Forms.TextBox tKeywords;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListBox ListQuestions;
+        private System.Windows.Forms.Label lQuestion;
+        private System.Windows.Forms.Label lKeywords;
+        private System.Windows.Forms.Button bStartQuiz;
+        private System.Windows.Forms.Label ldashboard;
     }
 }
