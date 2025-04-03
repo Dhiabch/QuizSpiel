@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace QuizSpiel
 {
-    internal class Antwort
+    internal class Question
     {
-        private int Antwort_ID;
-        private String Schluesselwoerter;
-
+        private int qestionID;
+        private String questionDescription;
     }
 }
