@@ -20,6 +20,10 @@ namespace QuizDhia2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            StartForm startform = new StartForm();
+
+            // Zeige StartForm
+            startform.Show();
 
         }
 
