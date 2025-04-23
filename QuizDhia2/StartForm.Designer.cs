@@ -51,9 +51,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(117, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 32);
+            this.label1.Size = new System.Drawing.Size(186, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Willkommen Dhia !";
+            this.label1.Text = "Willkommen !";
             // 
             // gbCreateQuestion
             // 
@@ -63,9 +63,9 @@
             this.gbCreateQuestion.Controls.Add(this.bSubmitQuestion);
             this.gbCreateQuestion.Controls.Add(this.tKeywords);
             this.gbCreateQuestion.Controls.Add(this.tQuestion);
-            this.gbCreateQuestion.Location = new System.Drawing.Point(123, 110);
+            this.gbCreateQuestion.Location = new System.Drawing.Point(123, 103);
             this.gbCreateQuestion.Name = "gbCreateQuestion";
-            this.gbCreateQuestion.Size = new System.Drawing.Size(446, 273);
+            this.gbCreateQuestion.Size = new System.Drawing.Size(446, 280);
             this.gbCreateQuestion.TabIndex = 2;
             this.gbCreateQuestion.TabStop = false;
             this.gbCreateQuestion.Visible = false;
@@ -149,11 +149,11 @@
             this.bStartQuiz.BackColor = System.Drawing.SystemColors.Control;
             this.bStartQuiz.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bStartQuiz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bStartQuiz.Location = new System.Drawing.Point(466, 597);
+            this.bStartQuiz.Location = new System.Drawing.Point(466, 588);
             this.bStartQuiz.Name = "bStartQuiz";
-            this.bStartQuiz.Size = new System.Drawing.Size(103, 32);
+            this.bStartQuiz.Size = new System.Drawing.Size(85, 32);
             this.bStartQuiz.TabIndex = 6;
-            this.bStartQuiz.Text = "Start Quiz !";
+            this.bStartQuiz.Text = "Start Quiz!";
             this.bStartQuiz.UseVisualStyleBackColor = false;
             // 
             // ldashboard
