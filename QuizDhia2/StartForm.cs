@@ -17,5 +17,9 @@ namespace QuizDhia2
             InitializeComponent();
         }
 
+        private void gbCreateQuestion_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
