@@ -128,14 +128,14 @@
             this.lHinweis.ForeColor = System.Drawing.Color.White;
             this.lHinweis.Location = new System.Drawing.Point(271, 387);
             this.lHinweis.Name = "lHinweis";
-            this.lHinweis.Size = new System.Drawing.Size(187, 17);
+            this.lHinweis.Size = new System.Drawing.Size(191, 17);
             this.lHinweis.TabIndex = 7;
-            this.lHinweis.Text = "kein Konto? erstelllen Sie eins";
+            this.lHinweis.Text = "kein Konto? erstelllen Sie eins!";
             this.lHinweis.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(130, 338);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
@@ -148,11 +148,11 @@
             // 
             this.cbViewPassword.AutoSize = true;
             this.cbViewPassword.BackColor = System.Drawing.Color.Transparent;
-            this.cbViewPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbViewPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbViewPassword.ForeColor = System.Drawing.Color.White;
             this.cbViewPassword.Location = new System.Drawing.Point(464, 348);
             this.cbViewPassword.Name = "cbViewPassword";
-            this.cbViewPassword.Size = new System.Drawing.Size(51, 19);
+            this.cbViewPassword.Size = new System.Drawing.Size(54, 19);
             this.cbViewPassword.TabIndex = 9;
             this.cbViewPassword.Text = "View";
             this.cbViewPassword.UseVisualStyleBackColor = false;
