@@ -41,12 +41,14 @@
             this.lVorname = new System.Windows.Forms.Label();
             this.bKontoErstellen = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbViewNewPassword = new System.Windows.Forms.CheckBox();
+            this.cbViewConfirmedPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtConfirm
             // 
-            this.txtConfirm.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirm.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirm.Location = new System.Drawing.Point(47, 408);
             this.txtConfirm.Multiline = true;
             this.txtConfirm.Name = "txtConfirm";
@@ -71,7 +73,7 @@
             // 
             this.txtCreatepassword.AccessibleName = "";
             this.txtCreatepassword.BackColor = System.Drawing.Color.White;
-            this.txtCreatepassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreatepassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCreatepassword.Location = new System.Drawing.Point(49, 340);
             this.txtCreatepassword.Multiline = true;
             this.txtCreatepassword.Name = "txtCreatepassword";
@@ -95,7 +97,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(49, 277);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
@@ -106,7 +108,7 @@
             // 
             this.txtLastname.AccessibleName = "";
             this.txtLastname.BackColor = System.Drawing.Color.White;
-            this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastname.Location = new System.Drawing.Point(49, 215);
             this.txtLastname.Multiline = true;
             this.txtLastname.Name = "txtLastname";
@@ -142,7 +144,7 @@
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstname.Location = new System.Drawing.Point(49, 150);
             this.txtFirstname.Multiline = true;
             this.txtFirstname.Name = "txtFirstname";
@@ -166,7 +168,7 @@
             // 
             this.bKontoErstellen.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bKontoErstellen.ForeColor = System.Drawing.Color.Navy;
-            this.bKontoErstellen.Location = new System.Drawing.Point(126, 456);
+            this.bKontoErstellen.Location = new System.Drawing.Point(126, 502);
             this.bKontoErstellen.Name = "bKontoErstellen";
             this.bKontoErstellen.Size = new System.Drawing.Size(113, 25);
             this.bKontoErstellen.TabIndex = 20;
@@ -185,12 +187,42 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
-            // RegisterForm
+            // cbViewNewPassword
+            // 
+            this.cbViewNewPassword.AutoSize = true;
+            this.cbViewNewPassword.BackColor = System.Drawing.Color.Transparent;
+            this.cbViewNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbViewNewPassword.ForeColor = System.Drawing.Color.White;
+            this.cbViewNewPassword.Location = new System.Drawing.Point(190, 376);
+            this.cbViewNewPassword.Name = "cbViewNewPassword";
+            this.cbViewNewPassword.Size = new System.Drawing.Size(53, 17);
+            this.cbViewNewPassword.TabIndex = 22;
+            this.cbViewNewPassword.Text = "View";
+            this.cbViewNewPassword.UseVisualStyleBackColor = false;
+            this.cbViewNewPassword.CheckedChanged += new System.EventHandler(this.cbViewNewPassword_CheckedChanged);
+            // 
+            // cbViewConfirmedPassword
+            // 
+            this.cbViewConfirmedPassword.AutoSize = true;
+            this.cbViewConfirmedPassword.BackColor = System.Drawing.Color.Transparent;
+            this.cbViewConfirmedPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbViewConfirmedPassword.ForeColor = System.Drawing.Color.White;
+            this.cbViewConfirmedPassword.Location = new System.Drawing.Point(192, 443);
+            this.cbViewConfirmedPassword.Name = "cbViewConfirmedPassword";
+            this.cbViewConfirmedPassword.Size = new System.Drawing.Size(53, 17);
+            this.cbViewConfirmedPassword.TabIndex = 23;
+            this.cbViewConfirmedPassword.Text = "View";
+            this.cbViewConfirmedPassword.UseVisualStyleBackColor = false;
+            this.cbViewConfirmedPassword.CheckedChanged += new System.EventHandler(this.cbViewConfirmedPassword_CheckedChanged);
+            // 
+            // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(284, 561);
+            this.Controls.Add(this.cbViewConfirmedPassword);
+            this.Controls.Add(this.cbViewNewPassword);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bKontoErstellen);
             this.Controls.Add(this.lVorname);
@@ -206,7 +238,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "RegisterForm";
+            this.Name = "SignUpForm";
             this.Text = "HappyA+";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -229,5 +261,7 @@
         private System.Windows.Forms.Label lVorname;
         private System.Windows.Forms.Button bKontoErstellen;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox cbViewNewPassword;
+        private System.Windows.Forms.CheckBox cbViewConfirmedPassword;
     }
 }
