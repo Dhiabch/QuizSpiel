@@ -29,7 +29,7 @@ namespace QuizDhia2
 
         private void bKontoErstellen_Click(object sender, EventArgs e)
         {
-
+            this.Close(); // Schließt das aktuelle Formular
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)

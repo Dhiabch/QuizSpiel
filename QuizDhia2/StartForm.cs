@@ -17,5 +17,6 @@ namespace QuizDhia2
             InitializeComponent();
         }
 
+       
     }
 }

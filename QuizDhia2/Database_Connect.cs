@@ -61,6 +61,11 @@ namespace QuizDhia2
             return dr["password"].ToString();
         }
 
+        public static void createUser(string vorname, string nachname,string benutzerName)
+        {
+            openCnn();
+            
+        }
         
     }
 }
