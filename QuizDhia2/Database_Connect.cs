@@ -60,5 +60,7 @@ namespace QuizDhia2
             closeCnn();
             return dr["password"].ToString();
         }
+
+        
     }
 }
