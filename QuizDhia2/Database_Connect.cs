@@ -12,12 +12,8 @@ namespace QuizDhia2
 {
     internal class Database_Connect
     {
-        private static SqlConnection cnn;
+        private static SqlConnection cnn = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Integrated Security=true; database=QuizSpiel");
 
-        public static void createConnection()
-        {
-            cnn = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Integrated Security=true; database=QuizSpiel");
-        }
         public static void openCnn()
         {
             try
@@ -40,7 +36,7 @@ namespace QuizDhia2
             openCnn();
             string sql = "SELECT * " +
                          "FROM tblUser " +
-                         "WHERE userName = " + userName + ";";
+                         "WHERE userName = '" + userName + "';";
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
             da.Fill(dt);
@@ -59,7 +55,7 @@ namespace QuizDhia2
             string sql = $"SELECT userName, " +
                 "password" +
                 " FROM tblUser " +
-                "where userName = " + userName + ";";
+                "where userName = '" + userName + "';";
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
             da.Fill(dt);
