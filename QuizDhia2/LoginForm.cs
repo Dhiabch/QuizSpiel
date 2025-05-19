@@ -50,7 +50,7 @@ namespace QuizDhia2
         private void bLogin_Click(object sender, EventArgs e)
         {
             StartForm StartForm = new StartForm();
-            SignUp_Logic.LoginUserName(Username, txtPassword, lHinweis, StartForm);
+            //SignUp_Logic.LoginUserName(Username, txtPassword, lHinweis, StartForm);
         }
     }
 }

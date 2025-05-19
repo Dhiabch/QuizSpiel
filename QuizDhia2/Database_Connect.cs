@@ -12,8 +12,7 @@ namespace QuizDhia2
 {
     internal class Database_Connect
     {
-        private static SqlConnection cnn = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Integrated Security=true; database=QuizSpiel");
-
+        private static SqlConnection cnn = new SqlConnection("Server=dpg-d0jlofffte5s73fvjfmg-a;Database=db_quizspiel;User Id=db_quizspiel_user;Password=nYA1TL6t4zsnBZE6ZCp5ZDWu1N1yqpWB");
         public static void openCnn()
         {
             try
