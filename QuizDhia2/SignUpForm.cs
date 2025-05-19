@@ -36,5 +36,29 @@ namespace QuizDhia2
         {
 
         }
+
+        private void cbViewNewPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbViewNewPassword.CheckState == CheckState.Checked)
+            {
+                txtCreatepassword.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtCreatepassword.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void cbViewConfirmedPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbViewConfirmedPassword.CheckState == CheckState.Checked)
+            {
+                txtConfirm.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtConfirm.UseSystemPasswordChar = false;
+            }
+        }
     }
 }

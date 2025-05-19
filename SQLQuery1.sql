@@ -1,4 +1,4 @@
-﻿/* Datenbank erzeugen, falls bereits existiert, vorher löschen */
+/* Datenbank erzeugen, falls bereits existiert, vorher löschen */
 
 IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'QuizSpiel') CREATE DATABASE QuizSpiel
 
