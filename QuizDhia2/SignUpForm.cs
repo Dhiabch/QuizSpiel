@@ -29,7 +29,11 @@ namespace QuizDhia2
 
         private void bKontoErstellen_Click(object sender, EventArgs e)
         {
-
+            StartForm startForm = new StartForm();
+            SignUpForm signUpForm = new SignUpForm();
+            SignUp_Logic.CreateUser(txtFirstname, txtLastname, txtUsername,
+                                      txtCreatepassword, txtCreatePWConfirm,
+                                      lFehlMeldung, startForm, signUpForm);
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
@@ -46,18 +50,6 @@ namespace QuizDhia2
             else
             {
                 txtCreatepassword.UseSystemPasswordChar = false;
-            }
-        }
-
-        private void cbViewConfirmedPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbViewConfirmedPassword.CheckState == CheckState.Checked)
-            {
-                txtConfirm.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                txtConfirm.UseSystemPasswordChar = false;
             }
         }
     }

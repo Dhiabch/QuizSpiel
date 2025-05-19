@@ -30,10 +30,6 @@ namespace QuizDhia2
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void cbViewPasswort_CheckedChanged(object sender, EventArgs e)
         {
@@ -49,8 +45,9 @@ namespace QuizDhia2
 
         private void bLogin_Click(object sender, EventArgs e)
         {
-            StartForm StartForm = new StartForm();
-            //SignUp_Logic.LoginUserName(Username, txtPassword, lHinweis, StartForm);
+            StartForm startForm = new StartForm();
+  
+            SignUp_Logic.LoginUserName(Username, txtPassword, lHinweis, startForm);
         }
     }
 }

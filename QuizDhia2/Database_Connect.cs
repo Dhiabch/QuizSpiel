@@ -7,18 +7,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Drawing;
+using Npgsql;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QuizDhia2
 {
     internal class Database_Connect
     {
-        private static SqlConnection cnn = new SqlConnection("Server=dpg-d0jlofffte5s73fvjfmg-a;Database=db_quizspiel;User Id=db_quizspiel_user;Password=nYA1TL6t4zsnBZE6ZCp5ZDWu1N1yqpWB");
+        private static NpgsqlConnection cnn = new NpgsqlConnection("Host=dpg-d0jlofffte5s73fvjfmg-a.frankfurt-postgres.render.com;Port=5432;Database=db_quizspiel;User Id=db_quizspiel_user;Password=nYA1TL6t4zsnBZE6ZCp5ZDWu1N1yqpWB;SSL Mode=Require;Trust Server Certificate=true;");
         public static void openCnn()
         {
             try
             {
                 cnn.Open();
-                Console.WriteLine("Connected to MySQL Database!");
             }
             catch (Exception ex)
             {
@@ -30,33 +31,29 @@ namespace QuizDhia2
         {
             cnn.Close();
         }
-        public static bool findUserByID(string userName)
+        public static bool findUserByUserName(string userName)
         {
-            openCnn();
             string sql = "SELECT * " +
                          "FROM tblUser " +
-                         "WHERE userName = '" + userName + "';";
+                         "WHERE username = '" + userName + "';";
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, cnn);
             da.Fill(dt);
 
-            if (dt.Rows.Count < 1)
+            if (dt.Rows.Count == 0)
             {
-                closeCnn();
                 return false;
             }
-            closeCnn();
             return true;
         }    
         private static string getPasswordUser(string userName)
         {
-            openCnn();
             string sql = $"SELECT userName, " +
                 "password" +
                 " FROM tblUser " +
                 "where userName = '" + userName + "';";
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, cnn);
             da.Fill(dt);
             DataRow dr = dt.Rows[0];
             closeCnn();
@@ -72,6 +69,18 @@ namespace QuizDhia2
             {
                 return false;
             }
+        }
+
+        public static void createUserDB (string userFirstname, string userLastname, string userName, string password)
+        {
+            string sql = $"INSERT INTO tblUser (userFirstname, userLastname, userName, password) " +
+                          "VALUES ('" + userFirstname + "','"
+                                      + userLastname + "','"
+                                      + userName + "','"
+                                      + password + "');";
+            DataTable dt = new DataTable();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, cnn);
+            da.Fill(dt);
         }
     }
 }
