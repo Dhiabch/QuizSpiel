@@ -1,4 +1,4 @@
-﻿namespace QuizDhia2
+﻿namespace QuizDhia
 {
     partial class SignUpForm
     {

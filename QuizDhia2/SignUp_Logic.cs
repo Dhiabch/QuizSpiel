@@ -6,14 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace QuizDhia2
+namespace QuizDhia
 {
     internal class SignUp_Logic
     {
         public static void LoginUserName(TextBox Username, TextBox txtPassword, Label lHinweis, Form StartForm)
         {
             Database_Connect.openCnn();
+
+            User.userName = Username.Text;
+
             lHinweis.Visible = false;
             if (Database_Connect.findUserByUserName(Username.Text))
             {
@@ -37,6 +41,7 @@ namespace QuizDhia2
                                       TextBox txtCreatepassword, TextBox txtCreatePWConfirm,
                                       Label lFehlMeldung, Form StartForm, Form SignUpForm)
         {
+            User.userFirstname = txtFirstname.Text;
             lFehlMeldung.Visible = false;
             Database_Connect.openCnn();
             if (!Database_Connect.findUserByUserName(txtUsername.Text))

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuizDhia2.Properties
+namespace QuizDhia.Properties
 {
 
 

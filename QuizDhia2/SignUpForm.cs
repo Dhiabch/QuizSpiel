@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuizDhia2
+namespace QuizDhia
 {
     public partial class SignUpForm : Form
     {

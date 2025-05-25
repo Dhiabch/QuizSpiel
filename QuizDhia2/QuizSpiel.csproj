@@ -87,6 +87,7 @@
     <Compile Include="StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartForm_Logic.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Database_Connect.cs">
       <CustomToolNamespace>QuizSpiel</CustomToolNamespace>

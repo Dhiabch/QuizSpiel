@@ -9,17 +9,12 @@ namespace QuizSpiel
     internal class User
     {
        
-        private String userName;
-        private String passwordUser;
+        public static String userName { get; set; }
+        public static String userFirstname { get; set; }
+        public static String passwordUser { get; set; }
         private int userID;
 
         public User()
         { }
-
-
-        public String getUser()
-        {
-            return userName;
-        }
     }
 }

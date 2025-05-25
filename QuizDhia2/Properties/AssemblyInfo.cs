@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("QuizDhia2")]
+[assembly: AssemblyTitle("QuizDhia")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Stadt Frankfurt am Main")]
-[assembly: AssemblyProduct("QuizDhia2")]
+[assembly: AssemblyProduct("QuizDhia")]
 [assembly: AssemblyCopyright("Copyright © Stadt Frankfurt am Main 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

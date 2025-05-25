@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Npgsql;
+using QuizSpiel;
+using System;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Drawing;
-using Npgsql;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace QuizDhia2
+namespace QuizDhia
 {
     internal class Database_Connect
     {
@@ -81,6 +74,19 @@ namespace QuizDhia2
             DataTable dt = new DataTable();
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, cnn);
             da.Fill(dt);
+        }
+
+        public static void getUserFirtsname() 
+        {
+            string sql = $"SELECT userfirstname, " +
+                " FROM tblUser " +
+                "where userName = '" + User.userName + "';";
+            DataTable dt = new DataTable();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, cnn);
+            da.Fill(dt);
+            DataRow dr = dt.Rows[0];
+            closeCnn();
+            User.userFirstname = dr["userfirstname"].ToString();
         }
     }
 }
