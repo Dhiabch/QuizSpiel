@@ -8,7 +8,6 @@ namespace QuizSpiel
 {
     internal class User
     {
-       
         public static String userName { get; set; }
         public static String userFirstname { get; set; }
         public static String passwordUser { get; set; }
