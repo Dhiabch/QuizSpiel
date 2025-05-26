@@ -88,5 +88,6 @@ namespace QuizDhia
             closeCnn();
             User.userFirstname = dr["userfirstname"].ToString();
         }
+
     }
 }

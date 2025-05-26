@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuizSpiel
+namespace QuizDhia
 {
     internal class User
     {
@@ -15,5 +15,6 @@ namespace QuizSpiel
 
         public User()
         { }
+
     }
 }
