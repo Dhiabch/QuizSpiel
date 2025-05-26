@@ -34,10 +34,10 @@
             this.lKeywords = new System.Windows.Forms.Label();
             this.lQuestion = new System.Windows.Forms.Label();
             this.bSubmitQuestion = new System.Windows.Forms.Button();
-            this.tKeywords = new System.Windows.Forms.TextBox();
+            this.tCorrectAnswer = new System.Windows.Forms.TextBox();
             this.tQuestion = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ListQuestions = new System.Windows.Forms.ListBox();
+            this.lbQuestions = new System.Windows.Forms.ListBox();
             this.bStartQuiz = new System.Windows.Forms.Button();
             this.ldashboard = new System.Windows.Forms.Label();
             this.gbCreateQuestion.SuspendLayout();
@@ -61,7 +61,7 @@
             this.gbCreateQuestion.Controls.Add(this.lKeywords);
             this.gbCreateQuestion.Controls.Add(this.lQuestion);
             this.gbCreateQuestion.Controls.Add(this.bSubmitQuestion);
-            this.gbCreateQuestion.Controls.Add(this.tKeywords);
+            this.gbCreateQuestion.Controls.Add(this.tCorrectAnswer);
             this.gbCreateQuestion.Controls.Add(this.tQuestion);
             this.gbCreateQuestion.Location = new System.Drawing.Point(164, 127);
             this.gbCreateQuestion.Margin = new System.Windows.Forms.Padding(4);
@@ -70,7 +70,6 @@
             this.gbCreateQuestion.Size = new System.Drawing.Size(595, 345);
             this.gbCreateQuestion.TabIndex = 2;
             this.gbCreateQuestion.TabStop = false;
-            this.gbCreateQuestion.Visible = false;
             // 
             // lKeywords
             // 
@@ -108,18 +107,19 @@
             this.bSubmitQuestion.TabIndex = 3;
             this.bSubmitQuestion.Text = "Submit";
             this.bSubmitQuestion.UseVisualStyleBackColor = false;
+            this.bSubmitQuestion.Click += new System.EventHandler(this.bSubmitQuestion_Click);
             // 
-            // tKeywords
+            // tCorrectAnswer
             // 
-            this.tKeywords.BackColor = System.Drawing.SystemColors.Control;
-            this.tKeywords.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tKeywords.Location = new System.Drawing.Point(33, 127);
-            this.tKeywords.Margin = new System.Windows.Forms.Padding(4);
-            this.tKeywords.Multiline = true;
-            this.tKeywords.Name = "tKeywords";
-            this.tKeywords.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tKeywords.Size = new System.Drawing.Size(536, 146);
-            this.tKeywords.TabIndex = 1;
+            this.tCorrectAnswer.BackColor = System.Drawing.SystemColors.Control;
+            this.tCorrectAnswer.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tCorrectAnswer.Location = new System.Drawing.Point(33, 127);
+            this.tCorrectAnswer.Margin = new System.Windows.Forms.Padding(4);
+            this.tCorrectAnswer.Multiline = true;
+            this.tCorrectAnswer.Name = "tCorrectAnswer";
+            this.tCorrectAnswer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tCorrectAnswer.Size = new System.Drawing.Size(536, 146);
+            this.tCorrectAnswer.TabIndex = 1;
             // 
             // tQuestion
             // 
@@ -143,17 +143,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // ListQuestions
+            // lbQuestions
             // 
-            this.ListQuestions.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ListQuestions.FormattingEnabled = true;
-            this.ListQuestions.ItemHeight = 16;
-            this.ListQuestions.Location = new System.Drawing.Point(164, 539);
-            this.ListQuestions.Margin = new System.Windows.Forms.Padding(4);
-            this.ListQuestions.Name = "ListQuestions";
-            this.ListQuestions.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ListQuestions.Size = new System.Drawing.Size(593, 164);
-            this.ListQuestions.TabIndex = 5;
+            this.lbQuestions.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbQuestions.FormattingEnabled = true;
+            this.lbQuestions.ItemHeight = 16;
+            this.lbQuestions.Location = new System.Drawing.Point(164, 539);
+            this.lbQuestions.Margin = new System.Windows.Forms.Padding(4);
+            this.lbQuestions.Name = "lbQuestions";
+            this.lbQuestions.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbQuestions.Size = new System.Drawing.Size(593, 164);
+            this.lbQuestions.TabIndex = 5;
             // 
             // bStartQuiz
             // 
@@ -190,7 +190,7 @@
             this.ClientSize = new System.Drawing.Size(912, 814);
             this.Controls.Add(this.ldashboard);
             this.Controls.Add(this.bStartQuiz);
-            this.Controls.Add(this.ListQuestions);
+            this.Controls.Add(this.lbQuestions);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbCreateQuestion);
             this.Controls.Add(this.lTitleWelc);
@@ -198,6 +198,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StartForm";
             this.Text = "HappyA+";
+            this.Load += new System.EventHandler(this.StartForm_Load);
             this.gbCreateQuestion.ResumeLayout(false);
             this.gbCreateQuestion.PerformLayout();
             this.ResumeLayout(false);
@@ -211,9 +212,9 @@
         private System.Windows.Forms.GroupBox gbCreateQuestion;
         private System.Windows.Forms.TextBox tQuestion;
         private System.Windows.Forms.Button bSubmitQuestion;
-        private System.Windows.Forms.TextBox tKeywords;
+        private System.Windows.Forms.TextBox tCorrectAnswer;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox ListQuestions;
+        private System.Windows.Forms.ListBox lbQuestions;
         private System.Windows.Forms.Label lQuestion;
         private System.Windows.Forms.Label lKeywords;
         private System.Windows.Forms.Button bStartQuiz;

@@ -8,8 +8,8 @@ namespace QuizSpiel
 {
     internal class Answer
     {
-        private int Answer_ID;
-        private String keyWords;
+        public static int Answer_ID { get; set; }
+        public static String corrAnswerDescription { get; set; }
 
     }
 }

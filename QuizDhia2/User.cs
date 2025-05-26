@@ -11,7 +11,8 @@ namespace QuizDhia
         public static String userName { get; set; }
         public static String userFirstname { get; set; }
         public static String passwordUser { get; set; }
-        private int userID;
+        public static int userID  { get; set; }
+        public List<Question> Fragen { get; set; } = new List<Question>();
 
         public User()
         { }

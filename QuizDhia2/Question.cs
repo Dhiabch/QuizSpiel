@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuizSpiel
+namespace QuizDhia
 {
     internal class Question
     {
-        private int qestionID;
-        private String questionDescription;
+        public static int questionID { get; set; }
+        public static String questionDescription { get; set; }
+        public int UserID { get; set; }
     }
 }

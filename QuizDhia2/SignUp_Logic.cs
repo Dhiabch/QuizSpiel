@@ -16,13 +16,13 @@ namespace QuizDhia
         {
             Database_Connect.openCnn();
 
-            User.userName = Username.Text;
-
             lHinweis.Visible = false;
             if (Database_Connect.findUserByUserName(Username.Text))
             {
                 if (Database_Connect.checkPassword(Username.Text, txtPassword.Text))
                 {
+                    User.userName = Username.Text;
+                    Database_Connect.getUserFirstname();
                     StartForm.Show();
                 }
                 else

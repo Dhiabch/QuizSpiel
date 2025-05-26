@@ -16,9 +16,15 @@ namespace QuizDhia
         public StartForm()
         {
             InitializeComponent();
-            //Database_Connect.getUserFirtsname();
-            //lTitleWelc.Text = "Welcome " + User.userFirstname + " !";
+        }
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+            lTitleWelc.Text = "Welcome " + User.userFirstname + " !";
         }
 
+        private void bSubmitQuestion_Click(object sender, EventArgs e)
+        {
+            StartForm_Logic.submitQuestAnsw(tQuestion, tCorrectAnswer, lbQuestions);
+        }
     }
 }

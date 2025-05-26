@@ -1,7 +1,9 @@
 ﻿using Npgsql;
 using QuizSpiel;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace QuizDhia
 {
@@ -33,11 +35,13 @@ namespace QuizDhia
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, cnn);
             da.Fill(dt);
 
-            if (dt.Rows.Count == 0)
+            if (dt.Rows.Count > 0)
             {
-                return false;
+                DataRow dr = dt.Rows[0];
+                User.userID = Convert.ToInt32(dr["userID"]);
+                return true;
             }
-            return true;
+            return false;
         }    
         private static string getPasswordUser(string userName)
         {
@@ -76,9 +80,9 @@ namespace QuizDhia
             da.Fill(dt);
         }
 
-        public static void getUserFirtsname() 
+        public static void getUserFirstname() 
         {
-            string sql = $"SELECT userfirstname, " +
+            string sql = $"SELECT userfirstname " +
                 " FROM tblUser " +
                 "where userName = '" + User.userName + "';";
             DataTable dt = new DataTable();
@@ -88,6 +92,34 @@ namespace QuizDhia
             closeCnn();
             User.userFirstname = dr["userfirstname"].ToString();
         }
+
+        public static void saveAnswer()
+        {
+
+            string sql = $"INSERT INTO tblAnswer (answerDescription, questionID)" +
+                           " VALUES ('" + Answer.corrAnswerDescription + "',(SELECT questionID FROM tblQuestion " +
+                                                                            "WHERE questionDescription = '" + Question.questionDescription + "'));"; 
+            using (var cmd = new NpgsqlCommand(sql, cnn))
+            {
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static void saveQuestion()
+        {
+            string sql = $"INSERT INTO tblQuestion (questionDescription, userID)" +
+                         " VALUES ('" + Question.questionDescription + "'," +
+                                        User.userID + ")" +
+                         " RETURNING questionID;";
+
+            using (var cmd = new NpgsqlCommand(sql, cnn))
+            {
+                Question.questionID = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+
+   
 
     }
 }
