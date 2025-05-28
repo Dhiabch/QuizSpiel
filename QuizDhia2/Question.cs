@@ -11,5 +11,6 @@ namespace QuizDhia
         public static int questionID { get; set; }
         public static String questionDescription { get; set; }
         public int UserID { get; set; }
+
     }
 }

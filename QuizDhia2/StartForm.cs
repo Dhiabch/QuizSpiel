@@ -1,4 +1,5 @@
-﻿using QuizSpiel;
+﻿using QuizDhia2;
+using QuizSpiel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,11 +21,18 @@ namespace QuizDhia
         private void StartForm_Load(object sender, EventArgs e)
         {
             lTitleWelc.Text = "Welcome " + User.userFirstname + " !";
+            StartForm_Logic.loadForm(lbQuestions);
         }
 
         private void bSubmitQuestion_Click(object sender, EventArgs e)
         {
             StartForm_Logic.submitQuestAnsw(tQuestion, tCorrectAnswer, lbQuestions);
+        }
+
+        private void bStartQuiz_Click(object sender, EventArgs e)
+        {
+            QuizForm quizForm = new QuizForm();
+            quizForm.ShowDialog();
         }
     }
 }

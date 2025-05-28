@@ -146,13 +146,14 @@
             // lbQuestions
             // 
             this.lbQuestions.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbQuestions.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuestions.FormattingEnabled = true;
-            this.lbQuestions.ItemHeight = 16;
+            this.lbQuestions.ItemHeight = 28;
             this.lbQuestions.Location = new System.Drawing.Point(164, 539);
             this.lbQuestions.Margin = new System.Windows.Forms.Padding(4);
             this.lbQuestions.Name = "lbQuestions";
             this.lbQuestions.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbQuestions.Size = new System.Drawing.Size(593, 164);
+            this.lbQuestions.Size = new System.Drawing.Size(593, 144);
             this.lbQuestions.TabIndex = 5;
             // 
             // bStartQuiz
@@ -167,6 +168,7 @@
             this.bStartQuiz.TabIndex = 6;
             this.bStartQuiz.Text = "Start Quiz!";
             this.bStartQuiz.UseVisualStyleBackColor = false;
+            this.bStartQuiz.Click += new System.EventHandler(this.bStartQuiz_Click);
             // 
             // ldashboard
             // 

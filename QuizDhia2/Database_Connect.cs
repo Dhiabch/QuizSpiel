@@ -118,8 +118,31 @@ namespace QuizDhia
             }
         }
 
+        public static void selectQA()
+        {
+            string sql = @"
+                        SELECT q.questionDescription, a.answerDescription
+                        FROM tblQuestion q
+                        INNER JOIN tblAnswer a ON q.questionID = a.questionID
+                        WHERE q.userID = @userID";
 
-   
+            using (var cmd = new NpgsqlCommand(sql, cnn))
+            {
+                cmd.Parameters.AddWithValue("@userID", User.userID);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        
+                        string questionDescription = reader.GetString(0);
+                        string corrAnswerDescription = reader.GetString(1);
+                        
+
+                        Quiz_Logic.QuestionAnswer.Add(questionDescription, corrAnswerDescription);
+                    }
+                }
+            }
+        }
 
     }
 }
